@@ -1,0 +1,15 @@
+# Travis "flavour" or language used in code
+language: node_js
+
+# Travis language version
+node_js:
+  - "stable"
+
+# Step to setup environment with tools for building
+before_install:
+  - npm install -g web-ext
+
+# How to test code
+script:
+  - web-ext lint
+  - web_ext build
